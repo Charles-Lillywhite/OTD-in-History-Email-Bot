@@ -9,6 +9,9 @@ from datetime import date
 # Get today's date for the email intro
 today = date.today().strftime("%b-%d-%Y")
 
+
+### SCRAPING ###
+
 # topics to identify which pages to scrape
 topics = ['', 'sport', 'music', 'film-tv']
 
@@ -45,7 +48,7 @@ for topic in topics:
 body += " That's all for today, I'll be back tomorrow with more great historical facts!"
     
 
-### send emails
+### EMAILING ###
 
 # email sender/recipient
 email_sender = # retracted for privacy
@@ -65,6 +68,7 @@ em.set_content(body)
 # security
 context = ssl.create_default_context() 
 
+# send emails using smtp
 with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
     smtp.login(email_sender, email_password)
     smtp.sendmail(email_sender, email_receiver, em.as_string())
