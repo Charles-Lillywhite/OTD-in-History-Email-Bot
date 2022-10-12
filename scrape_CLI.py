@@ -1,11 +1,9 @@
+# import necessary modules
 import requests
 from bs4 import BeautifulSoup
-import smtplib
-import ssl 
-from email.message import EmailMessage
 from datetime import date
 
-
+### SCRAPING ###
 
 base_URL = 'https://www.onthisday.com/'
 
