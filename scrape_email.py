@@ -17,6 +17,7 @@ topics = ['', 'sport', 'music', 'film-tv']
 
 base_URL = 'https://www.onthisday.com/'
 
+# body will be the text of the email
 body = f'ON THIS DAY IN HISTORY \n \n Another day on planet Earth! Here is your summary of {today} in the history of our pale blue dot. \n \n HISTORY'
 
 for topic in topics:
@@ -38,14 +39,15 @@ for topic in topics:
         all_events += events
 
     for e in all_events:
-        yr = str(e[0:4])+ ':'
-        desc = str(e[4:]) + '.'
-        t = yr + '\t' + desc + '\n'
-        body += t
+        yr = str(e[0:4])+ ':'   # the year of the event
+        desc = str(e[4:]) + '.'   # the desription of the event
+        t = yr + '\t' + desc + '\n'  # add these together into one piece of text
+        t = yr + '\t' + desc + '\n'  # add these together into one piece of text
+        body += t # add this text to the body of the email
     
     body += '\n \n'
 
-body += " That's all for today, I'll be back tomorrow with more great historical facts!"
+body += " That's all for today, I'll be back tomorrow with more great historical facts!" # sign off the email
     
 
 ### EMAILING ###
