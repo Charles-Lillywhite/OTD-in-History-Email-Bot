@@ -76,9 +76,9 @@ body += '''
 
 
     
-email_sender = 'otdinhistorybot@gmail.com'
-email_password = 'rqjpggzmmyuxsqdy'
-email_receiver = 'historylearner2022@gmail.com'
+email_sender = # removed for security
+email_password = # removed for security
+email_receiver = # removed for security
 
 
 subject = 'OTD In History'
